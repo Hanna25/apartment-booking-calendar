@@ -27,34 +27,130 @@ h1 {
   font-size: 20px;  
   font-weight: 700;
 }
-li {
-  list-style-type: none;
+/* месяцы и годы */
+#month-calendar{
+  width: 50%;
+  margin-top: 5%;
 }
+
 .month {
-  display: flex;
-  justify-content: center;
-  background-color: #817f7f;
-  margin: 0 auto;
-  
-}
-
-.weekdays {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
-}
-.weekdays li{
-  padding: 10px 10px;
-  background-color: #dddddd;
+  padding: 3rem 2rem 2rem;
+  background: #555555;
+  text-align: center;
+  color: #ffffff;
+  list-style: none;
 }
 
+.month li{
+  padding: 0;
+  margin: 0;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.month li.prev,
+.month li.next{
+  cursor: pointer;
+}
+
+.month li.prev{
+  float: left;
+}
+
+.month li.next{
+  float: right;
+}
+
+.month li.year-name{
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+
+/* дни недели */
+.weekdays{
+  margin: 0;
+  padding: 1rem 0;
+  background-color: #dddddd;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: left;
+}
+
+.weekdays li{
+  display: inline-block;
+  flex: 0 0 calc(100% / 7);
+  text-align: center;
+}
+
+/* дни */
 .days {
+  margin: 0;
+  padding: 1rem 0;
+  background-color: #eeeeee;
+  width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
-
+  justify-content: left;
+  align-content: flex-start;
+  height: 14rem;
 }
+
 .days li{
-  padding: 10px 10px;
+  padding: 1rem 0;
+  list-style: none;
+  display: inline-block;
+  flex: 0 0 calc(100% / 7);
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+  line-height: 1rem;
+  cursor: pointer;
+  transition: 0.4s;
+}
+.days li:hover {
+  background-color: #8dff578a;
+  transition: 0.4s;
+  color: #555555;
+}
+.days li:active {
+  background-color: #78d74b;
+  color: #555555;
+  bottom: 0rem;
+}
+.days li.date-now{
+  color: #000;
+  font-weight: 700;
+}
+
+.fas {
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: 1rem;
+}
+
+.fa-angle-double-left {
+  border-top: 0.3rem solid #78d74b;
+  border-left: 0.3rem solid #78d74b;
+  transform: rotate(316deg);
+}
+
+.fa-angle-double-right {
+  border-top: 0.3rem solid #78d74b;
+  border-right: 0.3rem solid #78d74b;
+  transform: rotate(-316deg);
+}
+.fa-angle-double-left:active {
+  border-top: 0.3rem solid #8dff578a;
+  border-left: 0.3rem solid #8dff578a;
+}
+.fa-angle-double-right:active {
+  border-top: 0.3rem solid #8dff578a;
+  border-right: 0.3rem solid #8dff578a;
 }
