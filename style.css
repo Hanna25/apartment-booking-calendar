@@ -98,7 +98,6 @@ h1 {
   flex-wrap: wrap;
   justify-content: left;
   align-content: flex-start;
-  height: 14rem;
 }
 
 .days li{
@@ -153,4 +152,8 @@ h1 {
 .fa-angle-double-right:active {
   border-top: 0.3rem solid #8dff578a;
   border-right: 0.3rem solid #8dff578a;
+}
+
+.price {
+  color: #555555;
 }
